@@ -1,24 +1,27 @@
 {
-    "name": "page-text",
-    "version": "0.0.1",
-    "description": "get page displayed text",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/LoveKino/page-text.git"
-    },
-    "keywords": [
-        "page",
-        "text",
-        "displayed"
-    ],
-    "author": "ddchen",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/LoveKino/page-text/issues"
-    },
-    "homepage": "https://github.com/LoveKino/page-text#readme"
+  "name": "page-text",
+  "version": "0.1.0",
+  "description": "get page displayed text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveKino/page-text.git"
+  },
+  "keywords": [
+    "page",
+    "text",
+    "displayed"
+  ],
+  "author": "ddchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoveKino/page-text/issues"
+  },
+  "homepage": "https://github.com/LoveKino/page-text#readme",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
 }

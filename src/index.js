@@ -9,6 +9,7 @@ let getDisplayText = (node) => {
         return '';
     }
 
+    // for input elements, people can see the content inside the element
     if (node.tagName === 'INPUT' ||
         node.tagName === 'SELECT') {
         return node.value || '';
@@ -16,6 +17,8 @@ let getDisplayText = (node) => {
 
     if (node.tagName === 'HEAD' ||
         node.tagName === 'LINK' ||
+        node.tagName === 'TITLE' ||
+        node.tagName === 'BASE' ||
         node.tagName === 'SCRIPT' ||
         node.tagName === 'NOSCRIPT' ||
         node.tagName === 'CANVAS' ||
@@ -41,6 +44,37 @@ let getDisplayText = (node) => {
     }
 };
 
+let getNodeText = (node) => {
+    if (node.nodeType === 3) { // text node
+        return node.textContent || '';
+    }
+
+    if (node.nodeType !== 1) { // other node but element node
+        return '';
+    }
+
+    // for input elements, people can see the content inside the element
+    if (node.tagName === 'INPUT' ||
+        node.tagName === 'SELECT') {
+        return node.value || '';
+    }
+
+    if (node.tagName === 'HEAD' ||
+        node.tagName === 'LINK' ||
+        node.tagName === 'TITLE' ||
+        node.tagName === 'BASE' ||
+        node.tagName === 'SCRIPT' ||
+        node.tagName === 'NOSCRIPT' ||
+        node.tagName === 'CANVAS' ||
+        node.tagName === 'STYLE' ||
+        node.tagName === 'META') {
+        return '';
+    }
+
+    return '';
+};
+
 module.exports = {
-    getDisplayText
+    getDisplayText,
+    getNodeText
 };
